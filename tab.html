@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tab实现</title>
+    <style>
+    body,
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    body,
+    a {
+        font: 14px '微软雅黑';
+        color: #000;
+    }
+    
+    .clear:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+    
+    .clear {
+        zoom: 1;
+    }
+    
+    .tab {
+        width: 572px;
+        margin: auto;
+        border: 1px solid #999;
+    }
+    
+    .tab .titles li {
+        width: 190px;
+        height: 30px;
+        float: left;
+        border: 1px solid #cecece;
+        border-width: 0 0 1px 1px;
+        background: #f1f1f1;
+    }
+    
+    .tab .titles li:first-child {
+        border-left: none;
+    }
+    
+    .tab .titles li.selected {
+        background: #fff;
+        border-bottom: none;
+    }
+    
+    .tab .titles a {
+        display: block;
+        line-height: 30px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    .tab .contents p {
+        padding: 20px;
+        background: #fff;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="tab">
+        <ul class="titles clear">
+            <li class="selected"><a href="javascript:;">课程</a></li>
+            <li><a href="javascript:;">学习计划</a></li>
+            <li><a href="javascript:;">技能图谱</a></li>
+        </ul>
+        <div class="contents">
+            <p>课程内容</p>
+            <p style="display:none;">学习计划内容</p>
+            <p style="display:none;">技能图谱内容</p>
+        </div>
+    </div>
+</body>
+
+</html>
