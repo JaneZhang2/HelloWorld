@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>弹窗实现</title>
+    <style>
+    body,
+    h1 {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .popup {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        width: 302px;
+        transform: translate(-50%, -50%);
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    
+    .popup .header {
+        position: relative;
+    }
+    
+    .popup .header .title {
+        height: 40px;
+        font: 14px/40px '微软雅黑';
+        padding: 0 20px;
+        vertical-align: middle;
+        background: #eee;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    .popup .header .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-image: url('../x.png');
+    }
+    
+    .popup .content {
+        padding: 20px;
+        background: #fff;
+        font: 12px '宋体';
+    }
+    
+    .popup .content .paragraph {
+        line-height: 1.5;
+    }
+    
+    .popup .content .confirm {
+        display: block;
+        margin: auto;
+        width: 80px;
+        height: 30px;
+        line-height: 30px;
+        background: blue;
+        color: #fff;
+        text-align: center;
+        vertical-align: middle;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="popup">
+        <div class="header">
+            <h1 class="title">标题栏</h1>
+            <a class="close" href="javascript:;"></a>
+        </div>
+        <div class="content">
+            <p class="paragraph"></p>
+            <a class="confirm" href="javascript:;">确定</a>
+        </div>
+    </div>
+</body>
+
+</html>
