@@ -2,38 +2,54 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>自适应布局</title>
-    <style>
-    body {
-        margin: 0;
-        padding: 0;
-    }
-    
-    * {
-        height: 100%;
-    }
-    
-    .parent .side {
-        width: 200px;
-        float: left;
-        background: red;
-    }
-    
-    .parent .main {
-        margin-left: 210px;
-        background: blue;
-    }
-    </style>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  * {
+    height: 100%;
+  }
+  
+  .clearfix:after {
+    content: ' ';
+    display: block;
+    clear: both;
+  }
+  
+  .clearfix {
+    *zoom: 1;
+  }
+  
+  .parent {
+    width: 810px;
+    margin: auto;
+  }
+  
+  .parent .side {
+    width: 200px;
+    float: left;
+    background: red;
+  }
+  
+  .parent .main {
+    width: 600px;
+    float: right;
+    background: blue;
+  }
+  </style>
 </head>
 
 <body>
-    <div class="parent">
-        <div class="side">侧栏</div>
-        <div class="main">主栏</div>
-    </div>
+  <div class="parent">
+    <div class="side">侧栏</div>
+    <div class="main">主栏</div>
+  </div>
 </body>
 
 </html>

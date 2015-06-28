@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="styles/canvas.css">
+  <script src="utils.js"></script>
+  <script src="keycode.js"></script>
+  <style>
+  * {
+    color: red;
+  }
+  
+  .parent p:last-child {
+    color: blue;
+  }
+  
+  .b.c {
+    color: green;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <div class="a">This is a Demo</div>
+    <p class="b c">Hello World</p>
+  </div>
+  <canvas id="canvas" width="400" height="400"></canvas>
+  <script>
+  window.onload = function() {
+    /*function add(number) {
+      var result = number;
+
+      function closure(number) {
+        result += number;
+        return closure;
+      }
+
+      closure.toString = function() {
+        return result;
+      };
+
+      return closure;
+    }
+*/
+    var search = (function() {
+      var index = 0,
+        offset = 0;
+
+      function closure(arr, dst) {
+        offset = parseInt(arr.length / 2);
+
+        if (dst == arr[offset]) {
+          return index + offset;
+        }
+        index += dst > arr[offset] ? offset + 1 : 0;
+        arr = dst > arr[offset] ? arr.slice(offset + 1) : arr.slice(0, offset);
+
+        return closure(arr, dst);
+      }
+
+      return closure;
+    })();
+
+    /*alert(search([1, 2, 4, 6, 7, 9, 19, 20, 30, 40, 45, 47], 6));*/
+
+    /*function onMouseEvent(event) {
+      console.log(event.type);
+    }*/
+
+    /*canvas.addEventListener('mousedown', onMouseEvent, false);
+    canvas.addEventListener('mouseup', onMouseEvent, false);
+    canvas.addEventListener('click', onMouseEvent, false);
+    canvas.addEventListener('dbclick', onMouseEvent, false);
+    canvas.addEventListener('mousewheel', onMouseEvent, false);
+    canvas.addEventListener('mousemove', onMouseEvent, false);
+    canvas.addEventListener('mouseover', onMouseEvent, false);
+    canvas.addEventListener('mouseout', onMouseEvent, false);*/
+  };
+  </script>
+</body>
+
+</html>

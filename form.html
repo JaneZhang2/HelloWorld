@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Untitled</title>
+  <style>
+  body,
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  caption {
+    font: bold 14px/16px '微软雅黑';
+    margin-bottom: 15px;
+  }
+  
+  .login td {
+    padding-bottom: 15px;
+  }
+  
+  .login label {
+    width: 60px;
+    font-size: 12px;
+    font-family: '宋体';
+  }
+  
+  .login input.text {
+    width: 200px;
+    height: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  .login tfoot td {
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+  .login input.submit {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background: blue;
+    color: #fff;
+    font-size: 12px;
+    font-family: '宋体';
+  }
+  </style>
+</head>
+
+<body>
+  <form class="login" action="/login">
+    <table>
+      <caption>登录网易通行证</caption>
+      <tbody>
+        <tr>
+          <td>
+            <label for="username">用户名：</label>
+          </td>
+          <td>
+            <input class="text" name="username" id="username" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="password">密码：</label>
+          </td>
+          <td>
+            <input class="text" name="password" id="password" type="password">
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">
+            <input class="submit" type="submit" value="登录">
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </form>
+</body>
+
+</html>
